@@ -13,3 +13,29 @@ a{
     color: #fff;
     text-decoration: none;
 }
+
+.proprieta-form-modifica{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout-form-modifica{
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.chiudi-finestra{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}

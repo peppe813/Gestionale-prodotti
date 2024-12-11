@@ -21,5 +21,9 @@ public class ProdottoService {
         Prodotto prodottoDaAggiungere = new Prodotto(p.getNome(), p.getPrezzo(), p.getDescrizione(), p.getQuantita(), p.getCategoria());
         return prodottoRepository.save(prodottoDaAggiungere);
     }
+
+    public void eliminaProdotto(int id){
+        prodottoRepository.deleteById(id);
+    }
      
 }

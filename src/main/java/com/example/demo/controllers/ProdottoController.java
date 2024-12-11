@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.model.Prodotto;
 import com.example.demo.services.ProdottoService;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class ProdottoController {
@@ -25,7 +28,7 @@ public class ProdottoController {
         } else {
             model.addAttribute("prodotti", prodotti);
         }
-        return "prodotti"; // la vista che visualizzerà i dati
+        return "prodotti";
     }
 
     @PostMapping("/registraProdotto")
@@ -35,4 +38,13 @@ public class ProdottoController {
         model.addAttribute("prodotti", prodotti);
         return "prodotti";
     }
+
+    @GetMapping("/elimina")
+    public String eliminaProdotto(@RequestParam int id, Model model){
+        prodottoService.eliminaProdotto(id);
+        List<Prodotto> prodotti = prodottoService.mostraTuttiProdotti();
+        model.addAttribute("prodotti", prodotti);
+        return "prodotti";
+    }
+    
 }
