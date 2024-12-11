@@ -14,6 +14,33 @@
   </head>
   <body>
     <h1 class="text-center">Benvenuto nell' Homepage Gestionale Prodotti</h1>
-    <button class="btn btn-primary w-100"><a href="visualizzatutti">Visualizza prodotti</a></button>
+    <button class="btn btn-primary w-100 mb-1"><a href="visualizzatutti">Visualizza prodotti</a></button>
+    <button class="btn btn-primary w-100 mb-1" id="btn-registra">Registra un prodotto</button>
+    <form class="container-form b d-flex flex-column p-2 d-none" action="registraProdotto" method="post" id="form-registra-prodotto">
+        <div class="field-form mb-2">
+            <label for="name" class="form-label">Nome Prodotto</label>
+            <input type="text" name="nome" class="form-control">
+        </div>
+        <div class="field-form mb-2">
+            <label for="prezzo" class="form-label">Prezzo Prodotto</label>
+            <input type="number" name="prezzo" class="form-control">
+        </div>
+        <div class="field-form mb-2">
+            <label for="descrizione" class="form-label">Descrizione Prodotto</label>
+            <input type="text" name="descrizione" class="form-control">
+        </div>
+        <div class="field-form mb-2">
+            <label for="quantita" class="form-label">Quantità Prodotto</label>
+            <input type="number" name="quantita" class="form-control">
+        </div>
+        <div class="field-form mb-2">
+            <label for="categoria" class="form-label">Categoria Prodotto</label>
+            <input type="text" name="categoria" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success mb-2">Registra</button>
+        <button type="button" class="btn btn-danger" id="btn-annulla-registrazione">Annulla</button>
+      </form>
+
+    <script src="script.js"></script>
   </body>
 </html>

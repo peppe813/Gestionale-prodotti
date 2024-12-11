@@ -16,5 +16,10 @@ public class ProdottoService {
     public List<Prodotto> mostraTuttiProdotti(){
         return prodottoRepository.findAll();
     }
+
+    public Prodotto aggiungiProdotto(Prodotto p){
+        Prodotto prodottoDaAggiungere = new Prodotto(p.getNome(), p.getPrezzo(), p.getDescrizione(), p.getQuantita(), p.getCategoria());
+        return prodottoRepository.save(prodottoDaAggiungere);
+    }
      
 }
