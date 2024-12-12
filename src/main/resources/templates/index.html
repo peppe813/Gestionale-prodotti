@@ -13,8 +13,8 @@
     <title>Homepage Gestionale prodotti</title>
   </head>
   <body>
-    <h1 class="text-center">Benvenuto nell' Homepage Gestionale Prodotti</h1>
-    <button class="btn btn-primary w-100 mb-1"><a href="visualizzatutti">Visualizza prodotti</a></button>
+    <h1 class="text-center">Gestionale Prodotti</h1>
+    <a href="visualizzatutti"><button class="btn btn-primary w-100 mb-1">Visualizza prodotti</button></a>
     <button class="btn btn-primary w-100 mb-1" id="btn-registra">Registra un prodotto</button>
     <form class="container-form b d-flex flex-column p-2 d-none" action="registraProdotto" method="post" id="form-registra-prodotto">
         <div class="field-form mb-2">
@@ -35,9 +35,9 @@
         </div>
         <div class="field-form mb-2">
             <label for="categoria" class="form-label">Categoria Prodotto</label>
-            <input type="text" name="categoria" class="form-control">
+            <input type="text" name="categoria" class="form-control" id="categoria-prodotto">
         </div>
-        <button type="submit" class="btn btn-success mb-2">Registra</button>
+        <button type="submit" class="btn btn-success mb-2 btn-salva-registrazione">Registra</button>
         <button type="button" class="btn btn-danger" id="btn-annulla-registrazione">Annulla</button>
         
       </form>

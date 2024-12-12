@@ -49,7 +49,7 @@
                 <td th:text="${prodotto.quantita}"></td>
                 <td>
                     <a th:href="@{/elimina(id=${prodotto.id})}"><button class="btn btn-danger">Elimina</button></a>
-                    <button class="btn btn-warning" id="modifica-prodotto"><a href="#">Modifica</a></button>
+                    <button class="btn btn-warning modifica-prodotto"><a th:href="@{/modifica/{id}(id=${prodotto.id})}">Modifica</a></button>
                 </td>
                 
             </tr>
