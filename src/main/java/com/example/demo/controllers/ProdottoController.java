@@ -39,7 +39,7 @@ public class ProdottoController {
         prodottoService.aggiungiProdotto(prodotto);
         List<Prodotto> prodotti = prodottoService.mostraTuttiProdotti();
         model.addAttribute("prodotti", prodotti);
-        return "prodotti";
+        return "redirect:/visualizzatutti";
     }
 
     @GetMapping("/elimina")
@@ -51,7 +51,7 @@ public class ProdottoController {
         }else{
             model.addAttribute("prodotti", prodotti);
         }
-        return "prodotti";
+        return "redirect:/visualizzatutti";
     }
 
     @GetMapping("/modifica/{id}")
