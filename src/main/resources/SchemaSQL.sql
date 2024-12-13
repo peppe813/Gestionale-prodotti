@@ -13,4 +13,4 @@ categoria varchar(250)
 insert into prodotti
 (nome,prezzo,descrizione,quantita,categoria)
 values
-("Xbox 360", 200, "Console microsoft", 4, "Console");
+("PlayStation 5", 200, "Console Sony", 4, "Console");
